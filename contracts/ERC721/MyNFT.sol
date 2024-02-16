@@ -11,7 +11,7 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Burnable.sol";
 contract MyNFT is ERC721, ERC721Enumerable, ERC721URIStorage, ERC721Pausable, Ownable, ERC721Burnable {
   uint256 private _nextTokenId;
 
-  constructor(address initialOwner) ERC721("MyNFT", "MNT") Ownable(initialOwner) {}
+  constructor(string memory _name, string memory _symbol) ERC721(_name, _symbol) Ownable(msg.sender) {}
 
   function _baseURI() internal pure override returns (string memory) {
     return "https://test-base-uri.com";
