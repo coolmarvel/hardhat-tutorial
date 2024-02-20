@@ -11,7 +11,7 @@ import "@openzeppelin/contracts-upgradeable/token/ERC20/extensions/ERC20FlashMin
 import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
 import "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol";
 
-contract MyTokenUpgradeable is
+contract MyTokenUpgradeableV1 is
   Initializable,
   ERC20Upgradeable,
   ERC20BurnableUpgradeable,

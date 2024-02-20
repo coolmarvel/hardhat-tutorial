@@ -3,7 +3,7 @@ import { ethers, upgrades } from "hardhat";
 const main = async () => {
   const [owner, otherAccount] = await ethers.getSigners();
 
-  const MyTokenUpgradeable = await ethers.getContractFactory("MyTokenUpgradeable");
+  const MyTokenUpgradeable = await ethers.getContractFactory("MyTokenUpgradeableV1");
   const myTokenUpgradeable = await upgrades.deployProxy(MyTokenUpgradeable, ["MyTokenUpgradeable", "MTKU", owner.address]);
   await myTokenUpgradeable.waitForDeployment();
 
